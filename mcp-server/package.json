@@ -1,10 +1,10 @@
 {
-  "name": "circuit-mcp",
+  "name": "circuitcx-mcp",
   "version": "0.1.0",
   "description": "MCP server for Circuit — surfaces active two-way Gmail conversations so Claude can triage your relationships. Deterministic Gmail engine; classification happens in your AI client.",
   "type": "module",
   "bin": {
-    "circuit-mcp": "bin/circuit-mcp.js"
+    "circuitcx-mcp": "bin/circuitcx-mcp.js"
   },
   "main": "dist/index.js",
   "files": [

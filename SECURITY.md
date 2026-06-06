@@ -23,4 +23,4 @@ Areas we especially care about:
 
 ## Supported versions
 
-The latest published `circuit-mcp` release and `main` receive security fixes.
+The latest published `circuitcx-mcp` release and `main` receive security fixes.

@@ -1,6 +1,6 @@
 # Installing the Circuit MCP server
 
-The MCP server (`circuit-mcp` on npm) runs Circuit's deterministic engine locally and exposes it to any MCP client. It's optional — the skill also works through Claude's Gmail connector — but it's faster and client-agnostic.
+The MCP server (`circuitcx-mcp` on npm) runs Circuit's deterministic engine locally and exposes it to any MCP client. It's optional — the skill also works through Claude's Gmail connector — but it's faster and client-agnostic.
 
 ## Prerequisites
 
@@ -12,7 +12,7 @@ The MCP server (`circuit-mcp` on npm) runs Circuit's deterministic engine locall
 ```bash
 export CIRCUIT_GOOGLE_CLIENT_ID=...
 export CIRCUIT_GOOGLE_CLIENT_SECRET=...
-npx -y circuit-mcp auth
+npx -y circuitcx-mcp auth
 ```
 
 This opens a browser, asks for **read-only** Gmail consent, and caches a refresh token at `~/.circuit/token.json`.
@@ -26,7 +26,7 @@ Add this to your client config (or copy from [`examples/`](../examples)):
   "mcpServers": {
     "circuit": {
       "command": "npx",
-      "args": ["-y", "circuit-mcp"],
+      "args": ["-y", "circuitcx-mcp"],
       "env": {
         "CIRCUIT_GOOGLE_CLIENT_ID": "your-google-oauth-client-id",
         "CIRCUIT_GOOGLE_CLIENT_SECRET": "your-google-oauth-client-secret"
@@ -63,7 +63,7 @@ npm run dev       # run from source with tsx
 
 ## Troubleshooting
 
-- **"Not authenticated"** → run `npx -y circuit-mcp auth`.
+- **"Not authenticated"** → run `npx -y circuitcx-mcp auth`.
 - **"Missing Google OAuth credentials"** → export the two env vars (also set them in the client config `env`).
 - **`Gmail API 403`** → confirm the Gmail API is enabled and your account is a Test User on the OAuth consent screen.
 - **Token issues** → delete `~/.circuit/token.json` and re-run `auth`.

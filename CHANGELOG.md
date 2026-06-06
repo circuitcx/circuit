@@ -12,9 +12,9 @@ Initial open-source release.
 - `circuit` Claude skill (`/circuit`) — scans Gmail for active two-way
   conversations and prints a classified table with deadlines and action items.
   Works with the Circuit MCP server or any Gmail connector.
-- `circuit-mcp` MCP server — deterministic, LLM-free Gmail engine exposing
+- `circuitcx-mcp` MCP server — deterministic, LLM-free Gmail engine exposing
   `circuit_scan_active_conversations` and `circuit_get_profile`, with one-time
-  loopback OAuth (`circuit-mcp auth`) and a local read-only token cache.
+  loopback OAuth (`circuitcx-mcp auth`) and a local read-only token cache.
 - Docs: quickstart, connect-gmail (connector + self-host paths), install
   guides, how-it-works, FAQ.
 - Example client configs and sample output.

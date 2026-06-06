@@ -28,7 +28,7 @@ Runs Circuit's deterministic engine locally and works with any MCP client. Requi
    ```bash
    export CIRCUIT_GOOGLE_CLIENT_ID=...      # from step 1
    export CIRCUIT_GOOGLE_CLIENT_SECRET=...
-   npx -y circuit-mcp auth
+   npx -y circuitcx-mcp auth
    ```
    A browser opens, you grant read-only Gmail access, and a token is cached at `~/.circuit/token.json`.
 4. **Install the skill** ([install-skill.md](./install-skill.md)) and run `/circuit`. With the MCP server present, the skill calls `circuit_scan_active_conversations` and is markedly faster.

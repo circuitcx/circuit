@@ -20,7 +20,7 @@ Circuit runs on top of email tools. Check which are available **in this order**:
 
    With a plain Gmail connector you must do the scanning and filtering yourself — follow the [Manual Execution Strategy](#manual-execution-strategy) below.
 
-If neither is available, tell the user to either install the Circuit MCP server (`npx -y circuit-mcp`, see the repo's `docs/install-mcp-server.md`) or enable their client's Gmail connector, then try again.
+If neither is available, tell the user to either install the Circuit MCP server (`npx -y circuitcx-mcp`, see the repo's `docs/install-mcp-server.md`) or enable their client's Gmail connector, then try again.
 
 ### Fast path — using the Circuit MCP server
 

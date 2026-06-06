@@ -12,7 +12,7 @@ body:
       label: Component
       options:
         - Skill (/circuit)
-        - MCP server (circuit-mcp)
+        - MCP server (circuitcx-mcp)
         - Docs
         - Not sure
     validations:
