@@ -25,7 +25,7 @@ Node 18+ required.
 
 ## Design boundaries (please keep these)
 
-- **The MCP server stays deterministic and LLM-free.** No model API keys, no classification in the server. The engine returns structured, *unclassified* conversations; the AI client classifies. This is what keeps the free tier free and stateless — don't add an LLM dependency to `mcp-server/`.
+- **The MCP server stays deterministic — it makes no LLM/model calls itself.** No model API keys, no classification in the server. The engine returns structured, *unclassified* conversations; the AI client classifies. This is what keeps the free tier free and stateless — don't add an LLM dependency to `mcp-server/`.
 - **`src/core/` is pure.** No network or filesystem I/O in `core/` — that lives in `gmail/`. Pure functions stay easy to test.
 - **Read-only.** Circuit never sends, modifies, or deletes mail. Don't request write scopes.
 - **No secrets in the repo.** Credentials come from env vars / the local token cache only.

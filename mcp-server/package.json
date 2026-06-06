@@ -1,6 +1,6 @@
 {
   "name": "circuitcx",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "MCP server for Circuit — surfaces active two-way Gmail conversations so Claude can triage your relationships. Deterministic Gmail engine; classification happens in your AI client.",
   "type": "module",
   "bin": {

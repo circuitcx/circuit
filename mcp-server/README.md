@@ -1,8 +1,8 @@
 # circuitcx
 
-The MCP server for **[Circuit](https://github.com/circuitcx/circuit)** — a deterministic, LLM-free engine that scans Gmail for your active **two-way** conversations and hands them to your AI client to classify and triage.
+The MCP server for **[Circuit](https://github.com/circuitcx/circuit)** — the deterministic data layer that scans Gmail for your active **two-way** conversations and hands them to your AI client (Claude) to classify and triage.
 
-It does the genuinely reusable work in code (two-way detection, automated-sender/newsletter filtering, thread assembly) and returns structured, *unclassified* conversations. Classification, deadlines, and action items are produced by your client (e.g. Claude running the [`/circuit` skill](https://github.com/circuitcx/circuit)). No LLM key lives in the server — it's free and stateless to run.
+Circuit is AI-powered: the classification, deadline extraction, and action items are all done by the LLM in your client. This server is the part that *isn't* — it does the reusable plumbing in code (two-way detection, automated-sender/newsletter filtering, thread assembly) and returns structured, *unclassified* conversations. Because the server itself makes no model calls and holds no API key, it's free and stateless to run; the intelligence is whatever Claude you already have.
 
 ## Install & connect
 
