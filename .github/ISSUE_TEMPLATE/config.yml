@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Questions & discussion
+    url: https://github.com/circuitcx/circuit/discussions
+    about: Ask questions, share setups, and get help here.
+  - name: Hosted Circuit
+    url: https://circuit.cx
+    about: Want managed, always-on sync and a dashboard? See the hosted version.
+  - name: Security report
+    url: https://github.com/circuitcx/circuit/security/advisories/new
+    about: Report vulnerabilities privately (do not open a public issue).

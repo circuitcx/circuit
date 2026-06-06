@@ -1,0 +1,54 @@
+name: Bug report
+description: Something isn't working as expected
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the report. **Please don't paste real email content** — redact names/addresses.
+  - type: dropdown
+    id: component
+    attributes:
+      label: Component
+      options:
+        - Skill (/circuit)
+        - MCP server (circuit-mcp)
+        - Docs
+        - Not sure
+    validations:
+      required: true
+  - type: dropdown
+    id: backend
+    attributes:
+      label: Gmail backend
+      options:
+        - Claude Gmail connector (Path A)
+        - Self-hosted MCP server (Path B)
+        - Not sure
+    validations:
+      required: true
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: What did you expect, and what happened instead?
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Ran `/circuit`
+        2. ...
+  - type: input
+    id: client
+    attributes:
+      label: Client & version
+      placeholder: "Claude Code 1.x / Claude Desktop / Node 20.x"
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant logs
+      description: Paste any error output (redacted).
+      render: shell

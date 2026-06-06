@@ -1,0 +1,17 @@
+{
+  "name": "circuit",
+  "owner": { "name": "Circuit", "url": "https://circuit.cx" },
+  "metadata": {
+    "description": "Circuit — relationship intelligence for founders, as a Claude skill.",
+    "version": "0.1.0"
+  },
+  "plugins": [
+    {
+      "name": "circuit",
+      "source": "./",
+      "description": "Run /circuit in Claude to scan Gmail for active two-way conversations, classified with deadlines and action items.",
+      "version": "0.1.0",
+      "category": "productivity"
+    }
+  ]
+}

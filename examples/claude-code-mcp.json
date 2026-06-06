@@ -1,0 +1,13 @@
+{
+  "// note": "Save as .mcp.json in your project (or merge into an existing one) for Claude Code. Replace the two env values. See docs/connect-gmail.md (Path B) for the Google OAuth credentials, then run `npx -y circuit-mcp auth` once to connect your mailbox.",
+  "mcpServers": {
+    "circuit": {
+      "command": "npx",
+      "args": ["-y", "circuit-mcp"],
+      "env": {
+        "CIRCUIT_GOOGLE_CLIENT_ID": "your-google-oauth-client-id",
+        "CIRCUIT_GOOGLE_CLIENT_SECRET": "your-google-oauth-client-secret"
+      }
+    }
+  }
+}

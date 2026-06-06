@@ -1,0 +1,53 @@
+{
+  "name": "circuit-mcp",
+  "version": "0.1.0",
+  "description": "MCP server for Circuit — surfaces active two-way Gmail conversations so Claude can triage your relationships. Deterministic Gmail engine; classification happens in your AI client.",
+  "type": "module",
+  "bin": {
+    "circuit-mcp": "bin/circuit-mcp.js"
+  },
+  "main": "dist/index.js",
+  "files": [
+    "dist",
+    "bin",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx watch src/index.ts",
+    "auth": "tsx src/index.ts auth",
+    "start": "node dist/index.js",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "gmail",
+    "claude",
+    "crm",
+    "relationship-intelligence",
+    "circuit"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/circuitcx/circuit.git",
+    "directory": "mcp-server"
+  },
+  "homepage": "https://circuit.cx",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.4",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8"
+  }
+}

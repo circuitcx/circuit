@@ -1,0 +1,10 @@
+{
+  "name": "circuit",
+  "version": "0.1.0",
+  "description": "Surface your active two-way email conversations — classified by relationship type, with deadlines and action items — right inside Claude.",
+  "author": { "name": "Circuit", "url": "https://circuit.cx" },
+  "homepage": "https://circuit.cx",
+  "repository": "https://github.com/circuitcx/circuit",
+  "license": "MIT",
+  "keywords": ["gmail", "email", "crm", "productivity", "relationship-intelligence"]
+}
