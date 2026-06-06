@@ -7,7 +7,7 @@
 Run `/circuit` in Claude and it scans your inbox for every active two-way conversation, classifies each by relationship type, and surfaces who you're waiting on, what's due, and what you owe.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
-[![npm](https://img.shields.io/npm/v/circuitcx-mcp.svg)](https://www.npmjs.com/package/circuitcx-mcp)
+[![npm](https://img.shields.io/npm/v/circuitcx.svg)](https://www.npmjs.com/package/circuitcx)
 [![CI](https://github.com/circuitcx/circuit/actions/workflows/ci.yml/badge.svg)](https://github.com/circuitcx/circuit/actions/workflows/ci.yml)
 
 [Quickstart](./docs/quickstart.md) · [Connect Gmail](./docs/connect-gmail.md) · [How it works](./docs/how-it-works.md) · [Hosted version](https://circuit.cx)
@@ -55,16 +55,16 @@ claude plugin install circuit@circuit
 **Optional local engine (any MCP client):**
 ```bash
 export CIRCUIT_GOOGLE_CLIENT_ID=...  CIRCUIT_GOOGLE_CLIENT_SECRET=...
-npx -y circuitcx-mcp auth      # one-time, read-only Gmail consent
+npx -y circuitcx auth      # one-time, read-only Gmail consent
 ```
 
 Full setup — including the zero-Google-Cloud path via Claude's Gmail connector — is in **[docs/quickstart.md](./docs/quickstart.md)**.
 
 ## Two ways to run
 
-| | Skill (`/circuit`) | + MCP server (`circuitcx-mcp`) |
+| | Skill (`/circuit`) | + MCP server (`circuitcx`) |
 |---|---|---|
-| Install | plugin / copy to `~/.claude/skills` | `npx -y circuitcx-mcp` |
+| Install | plugin / copy to `~/.claude/skills` | `npx -y circuitcx` |
 | Gmail access | Claude's Gmail connector | your own Google OAuth (read-only) |
 | Google Cloud setup | none | ~10 min, one time |
 | Speed | good | faster (engine runs in code) |
@@ -80,7 +80,7 @@ The skill auto-detects the MCP server and uses it when present; otherwise it fal
        ▼
    Claude  (your AI client)
        │   calls a Gmail tool:
-       ├──────────────►  circuitcx-mcp server  ──►  Gmail API (read-only)
+       ├──────────────►  circuitcx server  ──►  Gmail API (read-only)
        │                 deterministic engine (this repo, mcp-server/)
        └──────────────►  Claude Gmail connector  ──►  Gmail API (read-only)
 ```
@@ -105,7 +105,7 @@ Circuit is open core. This repo is the free tier. The hosted app adds the conven
 ```
 circuit/
 ├── skills/circuit/SKILL.md   the /circuit skill (classification + output)
-├── mcp-server/               circuitcx-mcp — deterministic Gmail engine (npm)
+├── mcp-server/               circuitcx — deterministic Gmail engine (npm)
 │   ├── src/core/             pure, unit-tested filters + two-way detection
 │   └── src/gmail/            Gmail REST client + OAuth
 ├── docs/                     setup, connect-gmail, how-it-works, faq

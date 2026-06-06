@@ -1,4 +1,4 @@
-# circuitcx-mcp
+# circuitcx
 
 The MCP server for **[Circuit](https://github.com/circuitcx/circuit)** — a deterministic, LLM-free engine that scans Gmail for your active **two-way** conversations and hands them to your AI client to classify and triage.
 
@@ -11,7 +11,7 @@ Requires Node 18+ and your own Google OAuth credentials (read-only Gmail). See [
 ```bash
 export CIRCUIT_GOOGLE_CLIENT_ID=...
 export CIRCUIT_GOOGLE_CLIENT_SECRET=...
-npx -y circuitcx-mcp auth      # one-time browser consent, caches ~/.circuit/token.json
+npx -y circuitcx auth      # one-time browser consent, caches ~/.circuit/token.json
 ```
 
 Register it with any MCP client:
@@ -21,7 +21,7 @@ Register it with any MCP client:
   "mcpServers": {
     "circuit": {
       "command": "npx",
-      "args": ["-y", "circuitcx-mcp"],
+      "args": ["-y", "circuitcx"],
       "env": {
         "CIRCUIT_GOOGLE_CLIENT_ID": "your-google-oauth-client-id",
         "CIRCUIT_GOOGLE_CLIENT_SECRET": "your-google-oauth-client-secret"

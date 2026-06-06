@@ -1,7 +1,7 @@
 // Circuit MCP server — stdio transport.
 //
-//   circuitcx-mcp auth   → one-time interactive Gmail OAuth
-//   circuitcx-mcp        → run the MCP server (default)
+//   circuitcx auth   → one-time interactive Gmail OAuth
+//   circuitcx        → run the MCP server (default)
 //
 // Tools are intentionally thin and deterministic. They return structured,
 // UNCLASSIFIED conversations; the AI client classifies and triages.
@@ -80,7 +80,7 @@ async function main(): Promise<void> {
 
   const transport = new StdioServerTransport();
   await server.connect(transport);
-  process.stderr.write("circuitcx-mcp running on stdio\n");
+  process.stderr.write("circuitcx running on stdio\n");
 }
 
 main().catch((err) => {

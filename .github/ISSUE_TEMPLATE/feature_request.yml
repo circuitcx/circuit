@@ -19,7 +19,7 @@ body:
       label: Area
       options:
         - Skill (/circuit)
-        - MCP server (circuitcx-mcp)
+        - MCP server (circuitcx)
         - Docs
         - Other
   - type: textarea

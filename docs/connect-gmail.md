@@ -48,7 +48,7 @@ Use this to run Circuit's engine locally in any MCP client. It needs your own Go
 ```bash
 export CIRCUIT_GOOGLE_CLIENT_ID=<your client id>
 export CIRCUIT_GOOGLE_CLIENT_SECRET=<your client secret>
-npx -y circuitcx-mcp auth
+npx -y circuitcx auth
 ```
 A browser window opens on a localhost loopback URL. Grant read-only Gmail access. The refresh token is cached at `~/.circuit/token.json` (chmod 600). You won't need to repeat this unless you revoke access.
 
@@ -57,7 +57,7 @@ Add the `circuit` server block from [`examples/claude-desktop-config.json`](../e
 
 ### Re-authorizing / revoking
 - Revoke at any time: <https://myaccount.google.com/permissions>.
-- To switch accounts: delete `~/.circuit/token.json` and run `npx -y circuitcx-mcp auth` again.
+- To switch accounts: delete `~/.circuit/token.json` and run `npx -y circuitcx auth` again.
 - "No refresh token returned" usually means a stale prior grant — revoke as above and re-run.
 
 ---

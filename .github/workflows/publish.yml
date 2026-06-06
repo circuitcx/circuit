@@ -1,4 +1,4 @@
-name: Publish circuitcx-mcp
+name: Publish circuitcx
 
 # Publishes mcp-server to npm when a v* tag is pushed.
 # Requires an NPM_TOKEN secret and the `npm` environment (manual approval).

@@ -1,9 +1,9 @@
 {
-  "// note": "Add this block to your Claude Desktop config: Settings → Developer → Edit Config (claude_desktop_config.json). Replace the two env values, then restart Claude Desktop. See docs/connect-gmail.md (Path B) to create the Google OAuth credentials, and run `npx -y circuitcx-mcp auth` once to connect.",
+  "// note": "Add this block to your Claude Desktop config: Settings → Developer → Edit Config (claude_desktop_config.json). Replace the two env values, then restart Claude Desktop. See docs/connect-gmail.md (Path B) to create the Google OAuth credentials, and run `npx -y circuitcx auth` once to connect.",
   "mcpServers": {
     "circuit": {
       "command": "npx",
-      "args": ["-y", "circuitcx-mcp"],
+      "args": ["-y", "circuitcx"],
       "env": {
         "CIRCUIT_GOOGLE_CLIENT_ID": "your-google-oauth-client-id",
         "CIRCUIT_GOOGLE_CLIENT_SECRET": "your-google-oauth-client-secret"

@@ -1,6 +1,6 @@
 // Google OAuth (installed-app / loopback flow) + token cache.
 //
-// One-time setup: the user runs `circuitcx-mcp auth`, which opens a browser,
+// One-time setup: the user runs `circuitcx auth`, which opens a browser,
 // asks for read-only Gmail consent, and caches the refresh token at
 // ~/.circuit/token.json (chmod 600). The MCP server then refreshes silently.
 //
@@ -79,7 +79,7 @@ export async function getAccessToken(): Promise<string> {
   const token = await loadToken();
   if (!token || !token.refresh_token) {
     throw new Error(
-      "Not authenticated. Run `npx circuitcx-mcp auth` once to connect your Gmail account.",
+      "Not authenticated. Run `npx circuitcx auth` once to connect your Gmail account.",
     );
   }
   if (token.access_token && token.expiry && Date.now() < token.expiry - 60_000) {
@@ -141,7 +141,7 @@ function openBrowser(url: string): void {
   }
 }
 
-/** Interactive one-time OAuth flow. Run via `circuitcx-mcp auth`. */
+/** Interactive one-time OAuth flow. Run via `circuitcx auth`. */
 export async function runAuthFlow(): Promise<void> {
   const { client_id, client_secret } = clientCreds();
   const { redirectUri, codePromise } = await startLoopbackServer();
@@ -179,7 +179,7 @@ export async function runAuthFlow(): Promise<void> {
   if (!data.refresh_token) {
     throw new Error(
       "No refresh token returned. Revoke prior access at " +
-        "https://myaccount.google.com/permissions and run `circuitcx-mcp auth` again.",
+        "https://myaccount.google.com/permissions and run `circuitcx auth` again.",
     );
   }
   await saveToken({
